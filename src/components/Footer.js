@@ -1,11 +1,19 @@
 import { Link } from 'react-router-dom'
-const footer = () => {
+import Button from './Button'
+
+const Footer = () => {
+
   return (
     <footer>
       <p>Copyright &copy;2021</p>
-      <Link to="/about">About</Link>
+      <Link to="/about">
+        <Button
+          buttonColor='blue'
+          text='About' />
+      </Link>
+
     </footer>
   )
 }
 
-export default footer
+export default Footer

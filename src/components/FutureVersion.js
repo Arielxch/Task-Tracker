@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 
-const About = () => {
+const FutureVersion = () => {
   return (
     <div>
-      <h4>Version 1.0.0</h4>
+      <h4>Version x.x.x</h4>
       <Link to='/'>Go Back</Link>
     </div>
   );
 };
 
-export default About;
+export default FutureVersion;

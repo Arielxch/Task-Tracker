@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer>
       <p>Copyright &copy;2021</p>
-      <Link to="/about">
+      <Link to="/About">
         {/* only when the current page is home page, button is presented */}
         {location.pathname === '/' && (
           <Button
@@ -16,6 +16,16 @@ const Footer = () => {
             text='About' />
         )}
       </Link>
+      <Link to="/future-version">
+        {/* only when the current page is home page, button is presented */}
+        {location.pathname === '/' && (
+          <Button
+            elementId='footer-button'
+            buttonColor='coral'
+            text='Future Version' />
+        )}
+      </Link>
+
 
     </footer>
   );

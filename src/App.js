@@ -2,10 +2,11 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import About from './components/About';
+
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
-import FutureVersion from './components/FutureVersion';
+
+import SharedAbout from './components/SharedAbout';
 
 
 const App = () => {
@@ -110,8 +111,8 @@ const App = () => {
             </>
 
           )} />
-        <Route path='/about' component={About} />
-        <Route path='/future-version' component={FutureVersion} />
+        <Route path='/about' render={() => <SharedAbout versionNumber='1.0.0' />} />
+        <Route path='/future-version' render={() => <SharedAbout versionNumber='x.x.x' />} />
         <Footer />
       </div>
     </Router>

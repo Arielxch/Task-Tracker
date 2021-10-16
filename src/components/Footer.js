@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer>
       <p>Copyright &copy;2021</p>
-      <Link to="/About">
+      <Link to="/about">
         {/* only when the current page is home page, button is presented */}
         {location.pathname === '/' && (
           <Button

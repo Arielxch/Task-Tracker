@@ -1,12 +1,12 @@
 import { Link } from 'react-router-dom';
 
-const FutureVersion = () => {
+const SharedAbout = ({ versionNumber }) => {
   return (
     <div>
-      <h4>Version x.x.x</h4>
+      <h4>Version {versionNumber}</h4>
       <Link to='/'>Go Back</Link>
     </div>
   );
 };
 
-export default FutureVersion;
+export default SharedAbout;

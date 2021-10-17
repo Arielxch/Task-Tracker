@@ -7,6 +7,7 @@ import AddTask from './components/AddTask';
 import SharedAbout from './components/SharedAbout';
 
 
+
 const App = () => {
   const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([]);
@@ -109,8 +110,8 @@ const App = () => {
             </>
 
           )} />
-        <Route path='/about' render={() => <SharedAbout versionTitle='about version' versionNumber='1.0.0' />} />
-        <Route path='/future-version' render={() => <SharedAbout versionTitle='future version' versionNumber='x.x.x' />} />
+        <Route path='/about' render={() => <SharedAbout versionTitle='about version' versionNumber='1.0.0' goBackButtonText='go back from about' />} />
+        <Route path='/future-version' render={() => <SharedAbout versionTitle='future version' versionNumber='x.x.x' goBackButtonText='go back from future version' />} />
         <Route path='/default-version' render={() => <SharedAbout />} />
         <Footer />
       </div>

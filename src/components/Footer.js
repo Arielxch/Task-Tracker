@@ -25,7 +25,15 @@ const Footer = () => {
             text='Future Version' />
         )}
       </Link>
-
+      <Link to="/default-version">
+        {/* only when the current page is home page, button is presented */}
+        {location.pathname === '/' && (
+          <Button
+            elementId='footer-button'
+            buttonColor='gray'
+            text='Default Version' />
+        )}
+      </Link>
 
     </footer>
   );

@@ -2,10 +2,8 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
-
 import SharedAbout from './components/SharedAbout';
 
 
@@ -111,8 +109,9 @@ const App = () => {
             </>
 
           )} />
-        <Route path='/about' render={() => <SharedAbout versionNumber='1.0.0' />} />
-        <Route path='/future-version' render={() => <SharedAbout versionNumber='x.x.x' />} />
+        <Route path='/about' render={() => <SharedAbout versionTitle='about version' versionNumber='1.0.0' />} />
+        <Route path='/future-version' render={() => <SharedAbout versionTitle='future version' versionNumber='x.x.x' />} />
+        <Route path='/default-version' render={() => <SharedAbout />} />
         <Footer />
       </div>
     </Router>

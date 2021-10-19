@@ -113,6 +113,10 @@ const App = () => {
         <Route path='/about' render={() => <SharedAbout versionTitle='about version' versionNumber='1.0.0' goBackButtonText='go back from about' />} />
         <Route path='/future-version' render={() => <SharedAbout versionTitle='future version' versionNumber='x.x.x' goBackButtonText='go back from future version' />} />
         <Route path='/default-version' render={() => <SharedAbout />} />
+        <Route path='/tasks' render={() => <Tasks
+          tasks={tasks}
+          onDelete={deleteTask}
+          onToggle={toggleReminder} />} />
         <Footer />
       </div>
     </Router>

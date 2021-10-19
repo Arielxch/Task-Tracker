@@ -9,7 +9,7 @@ const Footer = () => {
       <p>Copyright &copy;2021</p>
       <Link to="/about">
         {/* only when the current page is home page, button is presented */}
-        {location.pathname === '/' && (
+        {(location.pathname === '/' || location.pathname === '/tasks') && (
           <Button
             elementId='footer-button'
             buttonColor='blue'
@@ -18,7 +18,7 @@ const Footer = () => {
       </Link>
       <Link to="/future-version">
         {/* only when the current page is home page, button is presented */}
-        {location.pathname === '/' && (
+        {(location.pathname === '/' || location.pathname === '/tasks') && (
           <Button
             elementId='footer-button'
             buttonColor='coral'
@@ -27,7 +27,7 @@ const Footer = () => {
       </Link>
       <Link to="/default-version">
         {/* only when the current page is home page, button is presented */}
-        {location.pathname === '/' && (
+        {(location.pathname === '/' || location.pathname === '/tasks') && (
           <Button
             elementId='footer-button'
             buttonColor='gray'

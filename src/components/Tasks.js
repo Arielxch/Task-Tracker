@@ -1,6 +1,10 @@
-import Task from './Task'
+import Task from './Task';
+import { useParams } from 'react-router';
 
 const Tasks = ({ tasks, onDelete, onToggle }) => {
+  const { id } = useParams();
+  console.log(id);
+
   return (
     <>
       {tasks.map((task) => (
@@ -9,8 +13,8 @@ const Tasks = ({ tasks, onDelete, onToggle }) => {
           onDelete={onDelete}
           onToggle={onToggle} />))}
     </>
-  )
-}
+  );
+};
 
-export default Tasks
+export default Tasks;
 

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import Button from './Button';
 
 
@@ -8,6 +8,14 @@ const Header = ({ title, onAdd, showAdd }) => {
   return (
     <header className='header'>
       <h1>{title}</h1>
+      <Link to='/tasks'>
+        {location.pathname === '/' && (
+          <Button
+            elementId='tasks-button'
+            buttonColor='brown'
+            text='Tasks' />
+        )}
+      </Link>
       {location.pathname === '/' && (
         <Button
           elementId="header-button"
@@ -16,6 +24,7 @@ const Header = ({ title, onAdd, showAdd }) => {
           onClick={onAdd}
         />
       )}
+
     </header >
   );
 };

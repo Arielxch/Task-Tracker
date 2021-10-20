@@ -117,6 +117,10 @@ const App = () => {
           tasks={tasks}
           onDelete={deleteTask}
           onToggle={toggleReminder} />} />
+        <Route path='/task/:id' render={() => <Tasks
+          tasks={tasks}
+          onDelete={deleteTask}
+          onToggle={toggleReminder} />} />
         <Footer />
       </div>
     </Router>

@@ -1,20 +1,24 @@
 import Task from './Task';
 import { useParams } from 'react-router';
+import { useLocation } from 'react-router';
 
 const Tasks = ({ tasks, onDelete, onToggle }) => {
   const { id } = useParams();
-  console.log(id);
+  const location = useLocation();
+  console.log(location.pathname);
 
   return (
     <>
-      {tasks.map((task) => (
-        <Task key={task.id}
+      {location.pathname.includes('/task/') ? tasks.map(task => (
+        task.id == id && <Task key={task.id}
           task={task}
           onDelete={onDelete}
-          onToggle={onToggle} />))}
+          onToggle={onToggle} />)) : tasks.map(task => <Task key={task.id}
+            task={task}
+            onDelete={onDelete}
+            onToggle={onToggle} />)}
     </>
   );
 };
 
 export default Tasks;
-

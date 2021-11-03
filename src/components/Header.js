@@ -9,6 +9,7 @@ const Header = ({ title, onAdd, showAdd }) => {
     <header className='header'>
       <h1>{title}</h1>
       <Link to='/tasks'>
+
         {location.pathname === '/' && (
           <Button
             elementId='tasks-button'

@@ -9,7 +9,20 @@ const Tasks = ({ tasks, onDelete, onToggle }) => {
   console.log(location.pathname);
 
   const foundTask = tasks.find(task => task.id == id);
+  // let foundTask2;
+  // for (let i = 0; i < tasks.length; i++) {
+  //   if (tasks[i].id == id) {
+  //     foundTask2 = tasks[i];
+  //   }
+  // }
 
+  // const x = () => {
+
+  //   return;
+  // };
+  // function x() {
+  //   return;
+  // }
 
   return (
     <>

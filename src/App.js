@@ -5,6 +5,7 @@ import Footer from './components/Footer';
 import Tasks from './components/Tasks';
 import AddTask from './components/AddTask';
 import SharedAbout from './components/SharedAbout';
+import NotFound from './components/NotFound';
 
 
 
@@ -105,7 +106,8 @@ const App = () => {
                   onDelete={deleteTask}
                   onToggle={toggleReminder} />
               ) : (
-                'No tasks to show'
+                // 'No tasks to show'
+                <NotFound />
               )}
             </>
 
